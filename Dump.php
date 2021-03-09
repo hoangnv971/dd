@@ -6,8 +6,8 @@ class Dump
 	private $count = 0;
 	public $html;
 
-    public function dumpData($args){
-    	$this->html .= $this->header();
+	public function dumpData($args){
+		$this->html .= $this->header();
 		$this->html .= $this->d($args);
 		$this->html .= $this->footer();
 		return $this->html;
@@ -41,10 +41,10 @@ class Dump
 			else
 			{
 				$this->html .= "<span class='block-item'>
-					  <span class='key ".($isKeyString ? "str":"").($isKeyInt ? "int":"")."'>$key</span>
-					  <span class='character'> => </span>
-					  <span class='value ".($isValueString ? "str":"").($isValueInt ? "int":"")."'>$value</span>
-					  </span>";
+						<span class='key ".($isKeyString ? "str":"").($isKeyInt ? "int":"")."'>$key</span>
+						<span class='character'> => </span>
+						<span class='value ".($isValueString ? "str":"").($isValueInt ? "int":"")."'>$value</span>
+						</span>";
 			}	
 			$this->count += 1;
 			if ($this->count > 500) {
