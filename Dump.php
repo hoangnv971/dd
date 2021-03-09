@@ -6,7 +6,8 @@ class Dump
 	private $count = 0;
 	public $html;
 
-	public function dumpData($args){
+	public function dumpData($args)
+	{
 		$this->html .= $this->header();
 		$this->html .= $this->d($args);
 		$this->html .= $this->footer();
